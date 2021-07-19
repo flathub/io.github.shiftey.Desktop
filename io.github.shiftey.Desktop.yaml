@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: "20.08"
+base-version: '20.08'
 runtime: org.freedesktop.Platform
-runtime-version: "20.08"
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
@@ -37,28 +37,30 @@ modules:
     buildsystem: simple
     build-options:
       # Add the node bin directory & yarn directory.
-      append-path: "/usr/lib/sdk/node14/bin:/app/yarn/bin:/run/build/github-desktop/flatpak-node/chromedriver"
+      append-path: /usr/lib/sdk/node14/bin:/app/yarn/bin:/run/build/github-desktop/flatpak-node/chromedriver
       env:
         # Sets the directory where Node is located so way npm won't download the headers.
-        npm_config_nodedir: "/usr/lib/sdk/node14"
+        npm_config_nodedir: /usr/lib/sdk/node14
         # Set the Electron cache directory.
-        ELECTRON_CACHE: "/run/build/github-desktop/flatpak-node/electron-cache"
+        ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
-        OFFLINE: "1"
-        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
+        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+        OFFLINE: '1'
+        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
         # Use predownloaded dugite-native
-        DUGITE_CACHE_DIR: "/run/build/github-desktop/flatpak-node/yarn-mirror"
+        DUGITE_CACHE_DIR: /run/build/github-desktop/flatpak-node/yarn-mirror
     build-commands:
-      - "HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror"
-      - "node ./vendor/yarn-1.21.1.js --offline --verbose"
+      - HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror
+        $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
+      - node ./vendor/yarn-1.21.1.js --offline --verbose
       # Run electron-builder, passing the architecture arguments to it.
-      - ". flatpak-node/electron-builder-arch-args.sh; node ./vendor/yarn-1.21.1.js run --offline build:prod $ELECTRON_BUILDER_ARCH_ARGS"
+      - . flatpak-node/electron-builder-arch-args.sh; node ./vendor/yarn-1.21.1.js
+        run --offline build:prod $ELECTRON_BUILDER_ARCH_ARGS
       # Copy the resulting, unpacked directory to /app.
       # (A glob is used because the directory name may contain the current arch.)
-      - "cp -r dist/github-desktop-linux-* /app/github-desktop"
+      - cp -r dist/github-desktop-linux-* /app/github-desktop
       # Install the wrapper script to start it.
-      - "install -Dm 755 start-github-desktop.sh /app/bin/start-github-desktop"
+      - install -Dm 755 start-github-desktop.sh /app/bin/start-github-desktop
     post-install:
       - install -Dm644 app/static/logos/32x32.png  /app/share/icons/hicolor/32x32/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png
@@ -74,6 +76,7 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
+        commit: b3c54b5201e89c1fa39de485e50cef778eb9713a
       - type: file
         url: https://github.com/desktop/dugite-native/releases/download/v2.29.3-2/dugite-native-v2.29.3-3d467be-ubuntu.tar.gz
         dest: flatpak-node/yarn-mirror
@@ -93,4 +96,4 @@ modules:
       - type: script
         dest-filename: start-github-desktop.sh
         commands:
-          - 'FLATPAK_HOST=1 zypak-wrapper /app/github-desktop/github-desktop "$@"'
+          - FLATPAK_HOST=1 zypak-wrapper /app/github-desktop/github-desktop "$@"
