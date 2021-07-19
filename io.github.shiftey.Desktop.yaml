@@ -73,7 +73,7 @@ modules:
         tag: release-2.9.0-linux3
         x-checker-data:
           type: git
-          tag-pattern: "release-(\\d+\\.\\d+\\.\\d+-linux\\d+)"
+          tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
       - type: file
         url: https://github.com/desktop/dugite-native/releases/download/v2.29.3-2/dugite-native-v2.29.3-3d467be-ubuntu.tar.gz
         dest: flatpak-node/yarn-mirror
