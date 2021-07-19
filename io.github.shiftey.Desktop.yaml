@@ -45,6 +45,7 @@ modules:
         ELECTRON_CACHE: "/run/build/github-desktop/flatpak-node/electron-cache"
         # Skip Electron related downloads
         ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+        OFFLINE: "1"
         CHROMEDRIVER_SKIP_DOWNLOAD: "true"
         # Use predownloaded dugite-native
         DUGITE_CACHE_DIR: "/run/build/github-desktop/flatpak-node/yarn-mirror"
@@ -69,7 +70,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        commit: b3c54b5201e89c1fa39de485e50cef778eb9713a
+        tag: release-2.9.0-linux3
+        x-checker-data:
+          type: git
+          tag-pattern: "release-(\\d+\\.\\d+\\.\\d+-linux\\d+)"
       - type: file
         url: https://github.com/desktop/dugite-native/releases/download/v2.29.3-2/dugite-native-v2.29.3-3d467be-ubuntu.tar.gz
         dest: flatpak-node/yarn-mirror
