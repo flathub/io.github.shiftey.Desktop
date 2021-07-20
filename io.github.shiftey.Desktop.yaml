@@ -92,7 +92,5 @@ modules:
         path: io.github.shiftey.Desktop.desktop
       - type: file
         path: io.github.shiftey.Desktop.metainfo.xml
-      - type: script
-        dest-filename: start-github-desktop.sh
-        commands:
-          - FLATPAK_HOST=1 zypak-wrapper /app/github-desktop/github-desktop "$@"
+      - type: file
+        path: start-github-desktop.sh 
