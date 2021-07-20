@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '20.08'
+base-version: "20.08"
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: "20.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
@@ -44,9 +44,9 @@ modules:
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
-        OFFLINE: '1'
-        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
+        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+        OFFLINE: "1"
+        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
         # Use predownloaded dugite-native
         DUGITE_CACHE_DIR: /run/build/github-desktop/flatpak-node/yarn-mirror
     build-commands:
@@ -86,6 +86,7 @@ modules:
           - patches/0001-flatpak-use-yarn-directly-with-offline-flag-in-post.patch
           - patches/0002-flatpak-Set-electron-get-cacheRoot-to-flatpak-node-d.patch
           - patches/0003-fix-node-detect-arm64-translation-offline-building.patch
+          - patches/0004-allow-detection-of-flatpaked-code-editors.patch
       - generated-sources.json
       - generated-node-detect-arm64-translation-sources.json
       - type: file
@@ -93,4 +94,4 @@ modules:
       - type: file
         path: io.github.shiftey.Desktop.metainfo.xml
       - type: file
-        path: start-github-desktop.sh 
+        path: start-github-desktop.sh
