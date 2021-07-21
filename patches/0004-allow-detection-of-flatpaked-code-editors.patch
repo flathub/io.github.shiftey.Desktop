@@ -1,17 +1,8 @@
-From c17293f20152ff5cdc764c8be9a46058bb1e8e99 Mon Sep 17 00:00:00 2001
-From: advaithm <advaith.madhukar@gmail.com>
-Date: Tue, 20 Jul 2021 14:27:25 +0530
-Subject: [PATCH 1/1] allow detection of flatpaked code editors
-
----
- app/src/lib/helpers/linux.ts | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
-
 diff --git a/app/src/lib/helpers/linux.ts b/app/src/lib/helpers/linux.ts
-index e6e021808..33f9c42d1 100644
+index e6e021808..87f8214f7 100644
 --- a/app/src/lib/helpers/linux.ts
 +++ b/app/src/lib/helpers/linux.ts
-@@ -22,10 +22,9 @@ export function convertToFlatpakPath(path: string) {
+@@ -22,15 +22,21 @@ export function convertToFlatpakPath(path: string) {
      return path
    }
  
@@ -23,6 +14,28 @@ index e6e021808..33f9c42d1 100644
    return join('/var/run/host', path)
  }
  export function formatWorkingDirectoryForFlatpak(path: string): string {
--- 
-2.32.0
-
+   return path.replace(/(\s)/, "\ ")
+ }
++export function formatPathForFlatpak(path:string):string{
++  if (path.startsWith("/var/lib/flatpak/app")){
++    return path.replace("/var/lib/flatpak/app/","")
++  }else{
++    return path
++  }
++}
+ /**
+  * Checks the file path on disk exists before attempting to launch a specific shell
+  *
+@@ -84,10 +90,11 @@ export function spawnEditor(
+   options: SpawnOptions
+ ): ChildProcess {
+   if (isFlatpakBuild()) {
++    let actualpath = formatPathForFlatpak(path)
+     let EscapedworkingDirectory = formatWorkingDirectoryForFlatpak(workingDirectory)
+     return spawn(
+       'flatpak-spawn',
+-      ['--host', path, EscapedworkingDirectory],
++      ['--host', actualpath, EscapedworkingDirectory],
+       options
+     )
+   } else {
