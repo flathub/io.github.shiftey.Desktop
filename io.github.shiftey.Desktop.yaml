@@ -34,6 +34,15 @@ modules:
       - install -Dm0755 $(which git-shell) /app/bin/
       - install -Dm0755 $(which git-upload-archive) /app/bin/
       - install -Dm0755 $(which git-upload-pack) /app/bin/
+  - name: gpg
+    config-opts:
+      - --disable-doc
+      - --enable-gpg-is-gpg2
+      - --disable-tests
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
+        sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
   - name: github-desktop
     buildsystem: simple
     build-options:
