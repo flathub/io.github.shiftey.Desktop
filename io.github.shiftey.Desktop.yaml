@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '20.08'
+base-version: "20.08"
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: "20.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
@@ -17,6 +17,7 @@ finish-args:
   - --device=all
   - --filesystem=host
   - --filesystem=/opt/:ro
+  - --filesystem=/xdg-data/flatpak/app:ro
   - --filesystem=xdg-run/keyring
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
@@ -33,6 +34,15 @@ modules:
       - install -Dm0755 $(which git-shell) /app/bin/
       - install -Dm0755 $(which git-upload-archive) /app/bin/
       - install -Dm0755 $(which git-upload-pack) /app/bin/
+  - name: gpg
+    config-opts:
+      - --disable-doc
+      - --enable-gpg-is-gpg2
+      - --disable-tests
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
+        sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -44,9 +54,9 @@ modules:
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
-        OFFLINE: '1'
-        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
+        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+        OFFLINE: "1"
+        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
         # Use predownloaded dugite-native
         DUGITE_CACHE_DIR: /run/build/github-desktop/flatpak-node/yarn-mirror
     build-commands:
@@ -93,4 +103,4 @@ modules:
       - type: file
         path: io.github.shiftey.Desktop.metainfo.xml
       - type: file
-        path: start-github-desktop.sh 
+        path: start-github-desktop.sh
