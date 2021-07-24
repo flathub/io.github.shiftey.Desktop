@@ -48,4 +48,5 @@ Known Issues
 ------------
 
 - `Show in your File Manager` does not open the file manager
+
 This happens because the default manager is not set in your environment. You need to a default file manager to your `~/.config/mimeapps.list` file. If you are using nautilus, this can be done by adding `inode/directory=org.gnome.Nautilus.desktop` to the end of the `[Default Applications]` section.
