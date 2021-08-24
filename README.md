@@ -43,3 +43,10 @@ To update `desktop` repo to its latest commit and update the dependencies, you h
 4. Make sure the patches in the `patches` directory still apply.
 
 5. Once you are sure it works, make a PR with the changes.
+
+Known Issues
+------------
+
+- `Show in your File Manager` does not open the file manager
+
+    This happens because the default manager is not set in your environment. You need to add a default file manager to your `~/.config/mimeapps.list` file. If you are using nautilus, this can be done by adding `inode/directory=org.gnome.Nautilus.desktop` to the end of the `[Default Applications]` section.
