@@ -93,7 +93,6 @@ modules:
         sha256: 288d3b64dd9c7ecd73e289bf622ce226dc7b832f1b42cddecc039d0d3fd16b32
       - type: patch
         paths:
-          - patches/0001-flatpak-use-yarn-directly-with-offline-flag-in-post.patch
           - patches/0002-flatpak-Set-electron-get-cacheRoot-to-flatpak-node-d.patch
           - patches/0003-fix-node-detect-arm64-translation-offline-building.patch
       - generated-sources.json

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+t<?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.shiftey.Desktop</id>
   <name>Github-desktop</name>
@@ -19,15 +19,29 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-        <release version="2.9.0" date="2020-7-14">
+        <release version="2.9.2" date="2020-7-14">
             <description>
-                <p>Fixes</p>
+            	<p>Additions</p>
+            	<p>Show number of lines changed in a commit.
+            	   Include owner in suggested path when cloning a repository.
+            	   Added editor support for Kate and gEdit.
+            	   Upgraded to Electron 11.4.11 to resolve some segfaults found when testing.
+            	</p>
+            	<p>Fixes</p>
                 <p>
-                Point window icon to new version of logo
-                </p>
-                <p>Housekeeping</p>
-                <p>
-                [Flatpak] Escape working directory path using regex instead of quotes
+                Green circle in progress dialog remains round when commits have long descriptions.
+                History tab shows all commits as the user scrolls down. 
+                Remove border of Repository and Branch foldouts in dark theme.
+                Render links in commit messages when they are at the beginning of a line.
+                Show co-authors from undone commits.
+                Show SSH prompts (key passphrase, adding host, etc.) to users via dialog.
+                Change the diff gutter width based on number of lines in diff.
+                Fix scrolling performance issue for large diffs.
+                Check invalidated tokens and prompt the user to sign in again.
+                Double-click an option when switching branches to confirm how changed files are handled.
+                Improve auth error and prompt to suggest the user use a PAT instead of password.
+                Increase visibility of misattributed commit warning in dark mode.
+                Reduce time needed to make a commit
                 </p>
             </description>
         </release>
