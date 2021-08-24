@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: "20.08"
+base-version: '20.08'
 runtime: org.freedesktop.Platform
-runtime-version: "20.08"
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
@@ -53,9 +53,9 @@ modules:
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
-        OFFLINE: "1"
-        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
+        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+        OFFLINE: '1'
+        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
         # Use predownloaded dugite-native
         DUGITE_CACHE_DIR: /run/build/github-desktop/flatpak-node/yarn-mirror
     build-commands:
@@ -81,8 +81,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-2.9.0-linux4
-        commit: 92ad1ff4c27b827b12fea29a3c9da86c8c331700
+        tag: release-2.9.2-linux1
+        commit: 9689df680606f2634b2fe047c72a990696265004
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
