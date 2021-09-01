@@ -1,9 +1,9 @@
-app-id: io.github.shiftey.Desktop
+app-id: io.github.shiftkey.Desktop
 base: org.electronjs.Electron2.BaseApp
 base-version: "20.08"
-runtime: org.freedesktop.Platform
-runtime-version: "20.08"
-sdk: org.freedesktop.Sdk
+runtime: org.kde.Platform
+runtime-version: "5.15"
+sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
 command: start-github-desktop
@@ -21,6 +21,8 @@ finish-args:
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
+  - --filesystem=~/.gnupg:rw
+  - --filesystem=xdg-config/gnupg:rw
 modules:
   - shared-modules/libsecret/libsecret.json
   - name: git
@@ -42,6 +44,37 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
         sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
+  - name: pinentry
+    config-opts:
+      - --disable-pinentry-gnome3
+      - --disable-ncurses
+      - --disable-fallback-curses
+      - --disable-pinentry-curses
+      - --disable-pinentry-emacs
+      - --disable-pinentry-gtk2
+      - --enable-pinentry-qt5
+      - --disable-pinentry-tty
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.0.tar.bz2
+        sha256: 10072045a3e043d0581f91cd5676fcac7ffee957a16636adedaa4f583a616470
+  - name: trash-cli
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST} trash-cli --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/e1/b0/7276de53321c12981717490516b7e612364f2cb372ee8901bd4a66a000d7/psutil-5.8.0.tar.gz
+        sha256: 0c9ccb99ab76025f2f0bbecf341d4656e9c1351db8cc8a03ccd62e318ab4b5c6
+        x-checker-data:
+          type: pypi
+          name: psutil
+      - type: file
+        url: https://files.pythonhosted.org/packages/43/ed/ba5970572a6fd1332b8949b4c256954cd18d38764866504aa63f4322957b/trash-cli-0.21.7.24.tar.gz
+        sha256: 6cda4be92e19817fdd691fd8a9c5fa041c3b98761848ba353f0fd73cf1fe2710
+        x-checker-data:
+          type: pypi
+          name: trash-cli
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -76,8 +109,8 @@ modules:
       - install -Dm644 app/static/logos/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/256x256.png  /app/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/512x512.png  /app/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
-      - install -D io.github.shiftey.Desktop.desktop -t  /app/share/applications/
-      - install -D io.github.shiftey.Desktop.metainfo.xml -t  /app/share/metainfo/
+      - install -D io.github.shiftkey.Desktop.desktop -t  /app/share/applications/
+      - install -D io.github.shiftkey.Desktop.metainfo.xml -t  /app/share/metainfo/
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
@@ -97,8 +130,8 @@ modules:
       - generated-sources.json
       - generated-node-detect-arm64-translation-sources.json
       - type: file
-        path: io.github.shiftey.Desktop.desktop
+        path: io.github.shiftkey.Desktop.desktop
       - type: file
-        path: io.github.shiftey.Desktop.metainfo.xml
+        path: io.github.shiftkey.Desktop.metainfo.xml
       - type: file
         path: start-github-desktop.sh

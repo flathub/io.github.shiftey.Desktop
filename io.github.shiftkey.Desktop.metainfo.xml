@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.shiftey.Desktop</id>
+  <id>io.github.shiftkey.Desktop</id>
   <name>Github-desktop</name>
   <summary>GitHub Desktop is an open source GitHub app</summary>
   <metadata_license>CC0-1.0</metadata_license>
