@@ -44,8 +44,6 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
         sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
-    post-install:
-      - ln /app/bin/gpg /app/bin/gpg2
   - name: pinentry
     config-opts:
       - --disable-pinentry-gnome3
