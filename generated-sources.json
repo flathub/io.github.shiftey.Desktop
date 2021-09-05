@@ -12611,11 +12611,5 @@
         ],
         "dest-filename": "electron-builder-arch-args.sh",
         "dest": "flatpak-node"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "cd flatpak-node/tmp/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89; git archive --format tar -o ../../yarn-mirror/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89 HEAD"
-        ]
     }
 ]
