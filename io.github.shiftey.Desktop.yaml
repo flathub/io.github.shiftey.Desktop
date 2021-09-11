@@ -8,6 +8,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
 command: start-github-desktop
 separate-locales: false
+rename-icon: io.github.shiftey.Desktop
 finish-args:
   - --share=ipc
   - --socket=x11
