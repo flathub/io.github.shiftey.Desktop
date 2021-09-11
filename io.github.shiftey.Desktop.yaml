@@ -22,6 +22,7 @@ finish-args:
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.gtk.vfs.*
   - --filesystem=~/.gnupg:rw
   - --filesystem=xdg-config/gnupg:rw
 modules:
@@ -59,23 +60,6 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.0.tar.bz2
         sha256: 10072045a3e043d0581f91cd5676fcac7ffee957a16636adedaa4f583a616470
-  - name: trash-cli
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST} trash-cli --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/e1/b0/7276de53321c12981717490516b7e612364f2cb372ee8901bd4a66a000d7/psutil-5.8.0.tar.gz
-        sha256: 0c9ccb99ab76025f2f0bbecf341d4656e9c1351db8cc8a03ccd62e318ab4b5c6
-        x-checker-data:
-          type: pypi
-          name: psutil
-      - type: file
-        url: https://files.pythonhosted.org/packages/43/ed/ba5970572a6fd1332b8949b4c256954cd18d38764866504aa63f4322957b/trash-cli-0.21.7.24.tar.gz
-        sha256: 6cda4be92e19817fdd691fd8a9c5fa041c3b98761848ba353f0fd73cf1fe2710
-        x-checker-data:
-          type: pypi
-          name: trash-cli
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -104,9 +88,9 @@ modules:
       - cp -r dist/github-desktop-linux-* /app/github-desktop
       # Install the wrapper script to start it.
       - install -Dm755 start-github-desktop.sh /app/bin/start-github-desktop
+    post-install:
       - install -D io.github.shiftey.Desktop.desktop -t  /app/share/applications/
       - install -D io.github.shiftey.Desktop.metainfo.xml -t  /app/share/metainfo/
-    post-install:
       - install -Dm644 app/static/logos/32x32.png  /app/share/icons/hicolor/32x32/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
