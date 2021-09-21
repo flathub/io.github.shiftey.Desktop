@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.shiftey.Desktop</id>
+  <id> io.github.shiftey.Desktop</id>
   <name>Github-desktop</name>
   <summary>GitHub Desktop is an open source GitHub app</summary>
   <metadata_license>CC0-1.0</metadata_license>
@@ -19,16 +19,13 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-        <release version="2.9.0" date="2020-7-14">
+        <release version="2.9.3" date="2021-9-11">
             <description>
-                <p>Fixes</p>
-                <p>
-                Point window icon to new version of logo
-                </p>
-                <p>Housekeeping</p>
-                <p>
-                [Flatpak] Escape working directory path using regex instead of quotes
-                </p>
+            	<p>Housekeeping</p>
+              <p>
+                Submodules should only be updated if not offline
+                Add instructions for OpenSUSE distributions to README
+              </p>
             </description>
         </release>
     </releases>

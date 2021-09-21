@@ -1,17 +1,17 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
 base-version: "20.08"
-runtime: org.freedesktop.Platform
-runtime-version: "20.08"
-sdk: org.freedesktop.Sdk
+runtime: org.kde.Platform
+runtime-version: "5.15"
+sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
 command: start-github-desktop
 separate-locales: false
+rename-icon: io.github.shiftey.Desktop
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --socket=pulseaudio
   - --socket=ssh-auth
   - --share=network
   - --device=all
@@ -22,6 +22,9 @@ finish-args:
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.gtk.vfs.*
+  - --filesystem=~/.gnupg:rw
+  - --filesystem=xdg-config/gnupg:rw
 modules:
   - shared-modules/libsecret/libsecret.json
   - name: git
@@ -43,6 +46,20 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
         sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
+  - name: pinentry
+    config-opts:
+      - --disable-pinentry-gnome3
+      - --disable-ncurses
+      - --disable-fallback-curses
+      - --disable-pinentry-curses
+      - --disable-pinentry-emacs
+      - --disable-pinentry-gtk2
+      - --enable-pinentry-qt5
+      - --disable-pinentry-tty
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.0.tar.bz2
+        sha256: 10072045a3e043d0581f91cd5676fcac7ffee957a16636adedaa4f583a616470
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -70,20 +87,20 @@ modules:
       # (A glob is used because the directory name may contain the current arch.)
       - cp -r dist/github-desktop-linux-* /app/github-desktop
       # Install the wrapper script to start it.
-      - install -Dm 755 start-github-desktop.sh /app/bin/start-github-desktop
+      - install -Dm755 start-github-desktop.sh /app/bin/start-github-desktop
     post-install:
+      - install -D io.github.shiftey.Desktop.desktop -t  /app/share/applications/
+      - install -D io.github.shiftey.Desktop.metainfo.xml -t  /app/share/metainfo/
       - install -Dm644 app/static/logos/32x32.png  /app/share/icons/hicolor/32x32/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/256x256.png  /app/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
       - install -Dm644 app/static/logos/512x512.png  /app/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
-      - install -D io.github.shiftey.Desktop.desktop -t  /app/share/applications/
-      - install -D io.github.shiftey.Desktop.metainfo.xml -t  /app/share/metainfo/
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-2.9.0-linux4
-        commit: 92ad1ff4c27b827b12fea29a3c9da86c8c331700
+        tag: release-2.9.3-linux1
+        commit: d5700f6a75cb030290378295d1d49fd6e2b1ad1b
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
@@ -93,7 +110,6 @@ modules:
         sha256: 288d3b64dd9c7ecd73e289bf622ce226dc7b832f1b42cddecc039d0d3fd16b32
       - type: patch
         paths:
-          - patches/0001-flatpak-use-yarn-directly-with-offline-flag-in-post.patch
           - patches/0002-flatpak-Set-electron-get-cacheRoot-to-flatpak-node-d.patch
           - patches/0003-fix-node-detect-arm64-translation-offline-building.patch
           - patches/0004-allow-detection-of-flatpaked-code-editors.patch
