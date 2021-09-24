@@ -15,6 +15,16 @@
     },
     {
         "type": "file",
+        "url": "https://github.com/desktop/dugite-native/releases/download/v2.29.3-2/dugite-native-v2.29.3-3d467be-ubuntu.tar.gz",
+        "sha256": "288d3b64dd9c7ecd73e289bf622ce226dc7b832f1b42cddecc039d0d3fd16b32",
+        "dest-filename": "dugite-native-v2.29.3-3d467be-ubuntu.tar.gz",
+        "dest": "flatpak-node/tmp",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.0.0/SHASUMS256.txt",
         "sha256": "726c07876ad1e7c4c7e5e8f173dc10dd5ecc8e7097a2ad598d9caec76be7998d",
         "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.0.0SHASUMS256.txt"
@@ -12611,5 +12621,11 @@
         ],
         "dest-filename": "electron-builder-arch-args.sh",
         "dest": "flatpak-node"
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "cd flatpak-node/tmp/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89; git archive --format tar -o ../../yarn-mirror/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89 HEAD"
+        ]
     }
 ]

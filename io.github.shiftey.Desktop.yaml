@@ -108,10 +108,6 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
-      - type: file
-        url: https://github.com/desktop/dugite-native/releases/download/v2.32.0-1/dugite-native-v2.32.0-e5e7a87-ubuntu.tar.gz
-        dest: flatpak-node/yarn-mirror
-        sha256: d1bec4d9618b009e46c023ff4d03cdf8da3ce0419536cecf72e05e5bb350bc0d
       - type: patch
         paths:
           - patches/0001-fix-node-detect-arm64-translation-offline-building.patch
