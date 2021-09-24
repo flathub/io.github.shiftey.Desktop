@@ -43,7 +43,12 @@ modules:
     sources:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.4.tar.bz2
-        sha256sum: ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7
+        sha256: ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7
+        x-checker-data:
+          type: anitya
+          project-id: 1623
+          stable-only: true
+          url-template: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-$version.tar.bz2
   - name: gpg
     config-opts:
       - --disable-doc
