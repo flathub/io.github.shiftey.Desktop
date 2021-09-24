@@ -43,8 +43,8 @@ modules:
       - --disable-tests
     sources:
       - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.9.tar.bz2
-        sha256: 6278eaabffa1ebc9fa2ceb3dc53eea9a1505ab02a668a86dd6fec06951af2164
+        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.0.tar.bz2
+        sha256: 84c1ef39e8621cfb70f31463a5d1d8edeab44332bc1e0e1af9b78b6f9ed05bb4
   - name: pinentry
     config-opts:
       - --disable-pinentry-gnome3
