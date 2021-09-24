@@ -2,7 +2,7 @@ app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
 base-version: "21.08"
 runtime: org.kde.Platform
-runtime-version: "5.15-21.08"
+runtime-version: "21.08"
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node16
@@ -25,6 +25,7 @@ finish-args:
   - --talk-name=org.gtk.vfs.*
   - --filesystem=~/.gnupg:rw
   - --filesystem=xdg-config/gnupg:rw
+  - --filesystem=xdg-run/gnupg
 modules:
   - shared-modules/libsecret/libsecret.json
   - name: git
@@ -79,7 +80,7 @@ modules:
         OFFLINE: "1"
         CHROMEDRIVER_SKIP_DOWNLOAD: "true"
         # Use predownloaded dugite-native
-        TMPDIR: /run/build/github-desktop/flatpak-node/flatpak-node/tmp
+        TMPDIR: /run/build/github-desktop/flatpak-node/tmp
     build-commands:
       - HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror
         $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
