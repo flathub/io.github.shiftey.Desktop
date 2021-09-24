@@ -2,7 +2,7 @@ app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
 base-version: "21.08"
 runtime: org.kde.Platform
-runtime-version: "5.15"
+runtime-version: "5.15-21.08"
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
@@ -31,7 +31,6 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm0755 $(which git) /app/bin/
-      - install -Dm0755 $(which git-clang-format) /app/bin/
       - install -Dm0755 $(which git-cvsserver) /app/bin/
       - install -Dm0755 $(which git-receive-pack) /app/bin/
       - install -Dm0755 $(which git-shell) /app/bin/
@@ -44,8 +43,13 @@ modules:
       - --disable-tests
     sources:
       - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
-        sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
+        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.2.tar.bz2
+        sha256: e1d953e0e296072fca284215103ef168885eaac596c4660c5039a36a83e3041b
+        x-checker-data:
+          type: anitya
+          project-id: 1215
+          stable-only: true
+          url-template: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-$version.tar.bz2
   - name: pinentry
     config-opts:
       - --disable-pinentry-gnome3
@@ -60,6 +64,11 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.0.tar.bz2
         sha256: 10072045a3e043d0581f91cd5676fcac7ffee957a16636adedaa4f583a616470
+        x-checker-data:
+          type: anitya
+          project-id: 3643
+          stable-only: true
+          url-template: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-$version.tar.bz2
   - name: github-desktop
     buildsystem: simple
     build-options:
