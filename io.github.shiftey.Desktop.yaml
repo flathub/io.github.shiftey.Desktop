@@ -36,19 +36,6 @@ modules:
       - install -Dm0755 $(which git-shell) /app/bin/
       - install -Dm0755 $(which git-upload-archive) /app/bin/
       - install -Dm0755 $(which git-upload-pack) /app/bin/
-  - name: libgcrypt
-    config-opts:
-      - --disable-doc
-      - --disable-tests
-    sources:
-      - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.4.tar.bz2
-        sha256: ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7
-        x-checker-data:
-          type: anitya
-          project-id: 1623
-          stable-only: true
-          url-template: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-$version.tar.bz2
   - name: gpg
     config-opts:
       - --disable-doc
@@ -56,13 +43,8 @@ modules:
       - --disable-tests
     sources:
       - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.2.tar.bz2
-        sha256: e1d953e0e296072fca284215103ef168885eaac596c4660c5039a36a83e3041b
-        x-checker-data:
-          type: anitya
-          project-id: 1215
-          stable-only: true
-          url-template: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-$version.tar.bz2
+        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.9.tar.bz2
+        sha256: 6278eaabffa1ebc9fa2ceb3dc53eea9a1505ab02a668a86dd6fec06951af216
   - name: pinentry
     config-opts:
       - --disable-pinentry-gnome3
