@@ -5,7 +5,7 @@ runtime: org.kde.Platform
 runtime-version: "5.15-21.08"
 sdk: org.kde.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node14
+  - org.freedesktop.Sdk.Extension.node16
 command: start-github-desktop
 separate-locales: false
 rename-icon: io.github.shiftey.Desktop
@@ -44,7 +44,7 @@ modules:
     sources:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.9.tar.bz2
-        sha256: 6278eaabffa1ebc9fa2ceb3dc53eea9a1505ab02a668a86dd6fec06951af216
+        sha256: 6278eaabffa1ebc9fa2ceb3dc53eea9a1505ab02a668a86dd6fec06951af2164
   - name: pinentry
     config-opts:
       - --disable-pinentry-gnome3
