@@ -36,6 +36,14 @@ modules:
       - install -Dm0755 $(which git-shell) /app/bin/
       - install -Dm0755 $(which git-upload-archive) /app/bin/
       - install -Dm0755 $(which git-upload-pack) /app/bin/
+  - name: libgcrypt
+    config-opts:
+      - --disable-doc
+      - --disable-tests
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.4.tar.bz2
+        sha256sum: ea849c83a72454e3ed4267697e8ca03390aee972ab421e7df69dfe42b65caaf7
   - name: gpg
     config-opts:
       - --disable-doc
@@ -114,9 +122,9 @@ modules:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
       - type: file
-        url: https://github.com/desktop/dugite-native/releases/download/v2.29.3-2/dugite-native-v2.29.3-3d467be-ubuntu.tar.gz
+        url: https://github.com/desktop/dugite-native/releases/download/v2.32.0-1/dugite-native-v2.32.0-e5e7a87-ubuntu.tar.gz
         dest: flatpak-node/yarn-mirror
-        sha256: 288d3b64dd9c7ecd73e289bf622ce226dc7b832f1b42cddecc039d0d3fd16b32
+        sha256: d1bec4d9618b009e46c023ff4d03cdf8da3ce0419536cecf72e05e5bb350bc0d
       - type: patch
         paths:
           - patches/0001-fix-node-detect-arm64-translation-offline-building.patch
