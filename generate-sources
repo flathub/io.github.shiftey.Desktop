@@ -15,6 +15,7 @@ if __name__ == "__main__":
             "--electron-node-headers",
             "--node-chromedriver-from-electron",
             "9.3.1",
+            "--xdg-layout",
             "yarn",
             "-r",
             f"{root}/desktop/yarn.lock",

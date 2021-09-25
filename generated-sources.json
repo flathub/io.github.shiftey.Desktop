@@ -4,7 +4,13 @@
         "url": "https://www.electronjs.org/headers/v11.4.11/node-v11.4.11-headers.tar.gz",
         "strip-components": 1,
         "sha256": "3fd995fedb2a314f1f8ef53f0cf48e085ecc9609d9f98c65a73e8f8e091b59e5",
-        "dest": "flatpak-node/node-gyp/electron-current"
+        "dest": "flatpak-node/cache/node-gyp/11.4.11"
+    },
+    {
+        "type": "file",
+        "url": "data:9",
+        "dest-filename": "installVersion",
+        "dest": "flatpak-node/cache/node-gyp/11.4.11"
     },
     {
         "type": "file",
@@ -27,13 +33,15 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.0.0/SHASUMS256.txt",
         "sha256": "726c07876ad1e7c4c7e5e8f173dc10dd5ecc8e7097a2ad598d9caec76be7998d",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.0.0SHASUMS256.txt"
+        "dest-filename": "SHASUMS256.txt-11.0.0",
+        "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.0.0/chromedriver-v11.0.0-linux-arm64.zip",
         "sha256": "6a2434f20e82b1cbd11a370c62e544e0766c61d839aca6fd12e4f93bc969cab9",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-arm64.zip",
+        "dest-filename": "chromedriver-v11.0.0-linux-arm64.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
         ]
@@ -42,7 +50,8 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.0.0/chromedriver-v11.0.0-linux-armv7l.zip",
         "sha256": "3a3422bfb7ee21abac7bc4c35875f0cfc2dc19487ef007ed82667b73a7100bf1",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-armv7l.zip",
+        "dest-filename": "chromedriver-v11.0.0-linux-armv7l.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
         ]
@@ -51,7 +60,8 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.0.0/chromedriver-v11.0.0-linux-ia32.zip",
         "sha256": "c1860a411dc3ed184fa1bb9e7a247e8a2a418cd17ff556981a889ce210305f0e",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-ia32.zip",
+        "dest-filename": "chromedriver-v11.0.0-linux-ia32.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
         ]
@@ -60,7 +70,8 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.0.0/chromedriver-v11.0.0-linux-x64.zip",
         "sha256": "b53d0edaebca263f3ff21b307233f8d93c0181f6a215013fdf6caf6c7c36cf04",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-x64.zip",
+        "dest-filename": "chromedriver-v11.0.0-linux-x64.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
         ]
@@ -69,13 +80,15 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.4.11/SHASUMS256.txt",
         "sha256": "6ef01853ef98dfe9036139ce08210dd9d24e96244a4d9250d33b7f322eb310fd",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.4.11SHASUMS256.txt"
+        "dest-filename": "SHASUMS256.txt-11.4.11",
+        "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.4.11/electron-v11.4.11-linux-arm64.zip",
         "sha256": "edd622f99cd628a90d46fe62cdf8ca473b8125680d4b46a82dfd6dfee6f71088",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-arm64.zip",
+        "dest-filename": "electron-v11.4.11-linux-arm64.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
         ]
@@ -84,7 +97,8 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.4.11/electron-v11.4.11-linux-armv7l.zip",
         "sha256": "58251a2b9fc5ac68ad7e5fd8a1ab07b6e4cd675e8476e6f177388310b1831a3c",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-armv7l.zip",
+        "dest-filename": "electron-v11.4.11-linux-armv7l.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
         ]
@@ -93,7 +107,8 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.4.11/electron-v11.4.11-linux-ia32.zip",
         "sha256": "33eff09dfc655da756b247580b790060c93f306c4a8f33a457e8df1fd4f196c3",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-ia32.zip",
+        "dest-filename": "electron-v11.4.11-linux-ia32.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
         ]
@@ -102,7 +117,8 @@
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v11.4.11/electron-v11.4.11-linux-x64.zip",
         "sha256": "8c9525bffa3479e3a2de88f65348585948e4d03ecfc35b71641dc3833d9b639f",
-        "dest": "flatpak-node/electron-cache/httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-x64.zip",
+        "dest-filename": "electron-v11.4.11-linux-x64.zip",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
         ]
@@ -12623,9 +12639,126 @@
         "dest": "flatpak-node"
     },
     {
+        "type": "script",
+        "commands": [
+            "version=$(node --version | sed \"s/^v//\")",
+            "nodedir=$(dirname \"$(dirname \"$(which node)\")\")",
+            "mkdir -p \"flatpak-node/cache/node-gyp/$version\"",
+            "ln -s \"$nodedir/include\" \"flatpak-node/cache/node-gyp/$version/include\"",
+            "echo 9 > \"flatpak-node/cache/node-gyp/$version/installVersion\""
+        ],
+        "dest-filename": "setup_sdk_node_headers.sh",
+        "dest": "flatpak-node"
+    },
+    {
         "type": "shell",
         "commands": [
-            "cd flatpak-node/tmp/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89; git archive --format tar -o ../../yarn-mirror/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89 HEAD"
+            "cd flatpak-node/tmp/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89; git archive --format tar -o ../../yarn-mirror/node-detect-arm64-translation-d03110738f94fa684fc20cdfa412e83cd7984c89 HEAD",
+            "bash flatpak-node/setup_sdk_node_headers.sh"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-arm64.zip\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-arm64.zip/chromedriver-v11.0.0-linux-arm64.zip\"",
+            "mkdir -p \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-arm64.zip\" \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9/chromedriver-v11.0.0-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-armv7l.zip\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-armv7l.zip/chromedriver-v11.0.0-linux-armv7l.zip\"",
+            "mkdir -p \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-armv7l.zip\" \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9/chromedriver-v11.0.0-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-ia32.zip\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-ia32.zip/chromedriver-v11.0.0-linux-ia32.zip\"",
+            "mkdir -p \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-ia32.zip\" \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9/chromedriver-v11.0.0-linux-ia32.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-x64.zip\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.0.0chromedriver-v11.0.0-linux-x64.zip/chromedriver-v11.0.0-linux-x64.zip\"",
+            "mkdir -p \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9\"",
+            "ln -s \"../chromedriver-v11.0.0-linux-x64.zip\" \"fe8ca7691a6df4c9ec210f4d9b5ab801fe6c33393812a9a461b4ec134767bee9/chromedriver-v11.0.0-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-arm64.zip\"",
+            "ln -s \"../electron-v11.4.11-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-arm64.zip/electron-v11.4.11-linux-arm64.zip\"",
+            "mkdir -p \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63\"",
+            "ln -s \"../electron-v11.4.11-linux-arm64.zip\" \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63/electron-v11.4.11-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-armv7l.zip\"",
+            "ln -s \"../electron-v11.4.11-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-armv7l.zip/electron-v11.4.11-linux-armv7l.zip\"",
+            "mkdir -p \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63\"",
+            "ln -s \"../electron-v11.4.11-linux-armv7l.zip\" \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63/electron-v11.4.11-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-ia32.zip\"",
+            "ln -s \"../electron-v11.4.11-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-ia32.zip/electron-v11.4.11-linux-ia32.zip\"",
+            "mkdir -p \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63\"",
+            "ln -s \"../electron-v11.4.11-linux-ia32.zip\" \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63/electron-v11.4.11-linux-ia32.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-x64.zip\"",
+            "ln -s \"../electron-v11.4.11-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv11.4.11electron-v11.4.11-linux-x64.zip/electron-v11.4.11-linux-x64.zip\"",
+            "mkdir -p \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63\"",
+            "ln -s \"../electron-v11.4.11-linux-x64.zip\" \"7d382961d5e9e87ec15ea2b22d7a8ff9289a3693386e7e98a219e80e26377e63/electron-v11.4.11-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
         ]
     }
 ]
