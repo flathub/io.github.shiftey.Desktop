@@ -46,25 +46,6 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
         sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
-  - name: pinentry
-    config-opts:
-      - --enable-pinentry-gnome3
-      - --disable-ncurses
-      - --disable-fallback-curses
-      - --disable-pinentry-curses
-      - --disable-pinentry-emacs
-      - --disable-pinentry-gtk2
-      - --disable-pinentry-qt5
-      - --disable-pinentry-tty
-    sources:
-      - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.0.tar.bz2
-        sha256: 10072045a3e043d0581f91cd5676fcac7ffee957a16636adedaa4f583a616470
-        x-checker-data:
-          type: anitya
-          project-id: 3643
-          stable-only: true
-          url-template: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-$version.tar.bz2
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -112,9 +93,9 @@ modules:
       - type: patch
         paths:
           - patches/0001-fix-node-detect-arm64-translation-offline-building.patch
-          - patches/0002-flatpak-Set-electron-get-cacheRoot-to-flatpak-node-d.patch
+          #- patches/0002-flatpak-Set-electron-get-cacheRoot-to-flatpak-node-d.patch
       - generated-sources.json
-      - generated-node-detect-arm64-translation-sources.json
+      #- generated-node-detect-arm64-translation-sources.json
       - type: file
         path: io.github.shiftey.Desktop.desktop
       - type: file
