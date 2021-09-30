@@ -17,8 +17,9 @@
           <image>https://cloud.githubusercontent.com/assets/359239/26094502/a1f56d02-3a5d-11e7-8799-23c7ba5e5106.png</image>
         </screenshot>
   </screenshots>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <releases>
+        <release version="2.9.3-linux2" date="2021-09-30"/>
         <release version="2.9.3" date="2021-9-11">
             <description>
             	<p>Housekeeping</p>
