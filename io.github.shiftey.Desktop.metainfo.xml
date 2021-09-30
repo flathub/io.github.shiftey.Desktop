@@ -20,12 +20,11 @@
   <content_rating type="oars-1.1"/>
   <releases>
         <release version="2.9.3-linux2" date="2021-09-30"/>
-        <release version="2.9.3" date="2021-9-11">
             <description>
             	<p>Housekeeping</p>
               <p>
-                Submodules should only be updated if not offline
-                Add instructions for OpenSUSE distributions to README
+                Reverted #572 which was intended to include the organization name when cloning, but had unexpected side effects
+                Improvements for resolving external editors for Flatpak build 
               </p>
             </description>
         </release>
