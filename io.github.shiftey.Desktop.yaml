@@ -17,7 +17,8 @@ finish-args:
   - --device=all
   - --filesystem=host
   - --filesystem=/opt/:ro
-  - --filesystem=/xdg-data/flatpak/app:ro
+  - --filesystem=xdg-data/flatpak/app:ro
+  - --filesystem=/var/lib/flatpak/app:ro
   - --filesystem=xdg-run/keyring
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
