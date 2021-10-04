@@ -44,9 +44,10 @@ modules:
       - --enable-gpg-is-gpg2
       - --disable-tests
     sources:
+    # latest long term support release
       - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.29.tar.bz2
-        sha256: 39d07cdb4524818f9ebce49294931974af504519e6a7476c52e9d38fc0bd0cc9
+        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.31.tar.bz2 
+        sha256: 03eda09e8f9eaebab602057f3a8b908022a73999f5a31e580b12fcdf01fbebaf
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -79,11 +80,11 @@ modules:
     post-install:
       - install -D io.github.shiftey.Desktop.desktop -t  /app/share/applications/
       - install -D io.github.shiftey.Desktop.metainfo.xml -t  /app/share/metainfo/
-      - install -Dm644 app/static/logos/32x32.png  /app/share/icons/hicolor/32x32/apps/$FLATPAK_ID.png
-      - install -Dm644 app/static/logos/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png
-      - install -Dm644 app/static/logos/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
-      - install -Dm644 app/static/logos/256x256.png  /app/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
-      - install -Dm644 app/static/logos/512x512.png  /app/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
+      - install -Dm644 app/static/linux/logos/32x32.png  /app/share/icons/hicolor/32x32/apps/$FLATPAK_ID.png
+      - install -Dm644 app/static/linux/logos/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png
+      - install -Dm644 app/static/linux/logos/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
+      - install -Dm644 app/static/linux/logos/256x256.png  /app/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
+      - install -Dm644 app/static/linux/logos/512x512.png  /app/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
