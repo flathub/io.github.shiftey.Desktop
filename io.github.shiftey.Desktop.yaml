@@ -46,7 +46,7 @@ modules:
     sources:
     # latest long term support release
       - type: archive
-        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.31.tar.bz2 
+        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.31.tar.bz2
         sha256: 03eda09e8f9eaebab602057f3a8b908022a73999f5a31e580b12fcdf01fbebaf
   - name: github-desktop
     buildsystem: simple
@@ -88,8 +88,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-2.9.3-linux3
-        commit: f4879c28bee7449f797d4f5ca3b49805450df60b
+        tag: release-2.9.4-linux1
+        commit: af5d6dcd730dc42fc4d490cf19a9340ff5daca24
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
