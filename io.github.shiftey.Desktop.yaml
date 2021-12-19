@@ -55,7 +55,7 @@ modules:
       append-path: /usr/lib/sdk/node16/bin:/app/yarn/bin:/run/build/github-desktop/flatpak-node/chromedriver
       env:
         # Sets the directory where Node is located so way npm won't download the headers.
-        npm_config_nodedir: /usr/lib/sdk/node14
+        npm_config_nodedir: /usr/lib/sdk/node16
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
