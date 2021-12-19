@@ -19,35 +19,19 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="2.9.6-linux1" date="2021-12-18"/>
-        <release version="2.9.4-linux1" date="2021-10-22">
+        <release version="2.9.6-linux1" date="2021-12-18">
             <description>
-              <p>Added</p>
-              <ul>
-                <li>Add syntax highlighting for HAML</li>
-                <li>Add a menu item to view a committed file change on GitHub</li>
-              </ul>
-              <p>Fixes and improvements</p>
-              <ul>
-                <li>Diffs are scrolled to the top when switching between files</li>
-                <li>Fix SSH prompt for unknown hosts in some scenarios</li>
-                <li>Apply syntax highlighting when viewing a small change for the first time</li>
-                <li>Wrap long email addresses in the misattributed commit warning popover</li>
-                <li>Refresh diffs when application receives focus</li>
-                <li>Only consider tokens invalid when 401 error comes from GitHub Enterprise</li>
-                <li>Show "add repo" dialog when opening repo from CLI</li>
-                <li>Continue merge flow after merge conflicts are resolved with external conflict tool</li>
-                <li>Prevent crash on successful merge after conflicts resolved</li>
-                <li>Use same width for hunk expansion handles as we do for line numbers</li>
-                <li>Use the correct icon for diff expansion</li>
-                <li>Add offending file name to the file exceeds size limit error</li>
-                <li>Show a message explaining why line selection is disabled when hiding whitespace</li>
-                <li>Remove gaps in the commit message container revealing a different background</li>
-                <li>Add clearer verbiage in the "remove repository" dialog</li>
-                <li>Update grammar for "repo deletion" and "couldn't find pull request" error messages</li>
-                <li>Show confirmation dialog for SSH host key verification</li>
-              </ul>
+                <p>Added</p>
+                <ul>
+                    <li>View and re-run the check runs for the checked out pull request</li>
+                </ul>
+                <p>Fixes and improvements</p>
+                <ul>
+                    <li>Tooltip improvements and polish</li>                    
+                    <li>Stashing dialog no longer hangs when initiating cherry-pick in some circumstances</li>
+                    <li>Rebase no longer hangs after conflicts resolved when initiated through pull conflict error</li>
+                </ul>
             </description>
         </release>
-    </releases>
+    </releases> 
 </component>
