@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.shiftey.Desktop</id>
-  <name>Github Desktop</name>
+  <name>GitHub Desktop</name>
   <summary>GitHub Desktop is an open source GitHub app</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <description>
     <p>
-      GitHub Desktop is an open source GitHub app. This version of Github Desktop is a fork that adds support for Linux
+      GitHub Desktop is an open source GitHub app. This version of GitHub Desktop is a fork that adds support for Linux
     </p>
   </description>
   <url type="homepage">https://github.com/shiftkey/desktop#readme</url>
