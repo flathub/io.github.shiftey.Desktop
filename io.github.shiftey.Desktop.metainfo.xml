@@ -40,17 +40,12 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="2.9.6-linux1" date="2021-12-18">
+        <release version="2.9.9-linux1" date="2021-2-23">
             <description>
-                <p>Added</p>
-                <ul>
-                    <li>View and re-run the check runs for the checked out pull request</li>
-                </ul>
                 <p>Fixes and improvements</p>
                 <ul>
-                    <li>Tooltip improvements and polish</li>                    
-                    <li>Stashing dialog no longer hangs when initiating cherry-pick in some circumstances</li>
-                    <li>Rebase no longer hangs after conflicts resolved when initiated through pull conflict error</li>
+                    <li>"Create New Repository" dialog preserves the path set from "Add Local Repository" dialog</li>
+                    <li>User guides now opens the correct page</li>
                 </ul>
             </description>
         </release>
