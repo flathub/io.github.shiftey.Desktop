@@ -44,8 +44,7 @@
             <description>
                 <p>Fixes and improvements</p>
                 <ul>
-                    <li>"Create New Repository" dialog preserves the path set from "Add Local Repository" dialog</li>
-                    <li>User guides now opens the correct page</li>
+                    <li>Enable theme change tracking to synchronize with OS dark/light theme</li>
                 </ul>
             </description>
         </release>
