@@ -40,11 +40,21 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="2.9.9-linux2" date="2021-2-23">
+        <release version="2.9.12-linux1" date="2021-2-23">
             <description>
                 <p>Fixes and improvements</p>
                 <ul>
-                    <li>Enable theme change tracking to synchronize with OS dark/light theme</li>
+                    <li>Escape special characters when adding a file to .gitignore</li>
+                    <li>Show warning when attempting to commit files exceeding 100 MiB</li>
+                    <li>Allow selecting emojis in commit text</li>
+                    <li>Merge dialog options dropdown does not cause dialog scrolling</li>
+                    <li>Usernames displayed in repository list respect username casing</li>
+                    <li>Coauthor doesn't steal input focus while inputting commit message in squashing dialog</li>
+                    <li>Repository path validation for adding a repository doesn't erase keystrokes</li>
+                    <li>Relative time formatting consistent with dotcom</li>
+                    <li>Prompt to initialize Git LFS cannot be dismissed by clicking outside of it</li>
+                    <li>Add link to open fork settings when creating new branch on a forked repository</li>
+                    <li>Render native elements such as scrollbars and checkboxes as dark when using a dark theme</li>
                 </ul>
             </description>
         </release>
