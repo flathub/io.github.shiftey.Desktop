@@ -22,9 +22,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/desktop/dugite-native/releases/download/v2.32.1-1/dugite-native-v2.32.1-bb06bdb-ubuntu.tar.gz",
-        "sha256": "52ce6b8c8a753d3b0dddda6e23b3455866745659ef5768313b15193c6ac11a91",
-        "dest-filename": "dugite-native-v2.32.1-bb06bdb-ubuntu.tar.gz",
+        "url": "https://github.com/desktop/dugite-native/releases/download/v2.35.3-1/dugite-native-v2.35.3-59249aa-ubuntu.tar.gz",
+        "sha256": "a15c6501ed6980f9d2d7956d85d70d218f58a1f4c72661383e268c2c283eb46d",
+        "dest-filename": "dugite-native-v2.35.3-59249aa-ubuntu.tar.gz",
         "dest": "flatpak-node/tmp",
         "only-arches": [
             "x86_64"
@@ -3747,9 +3747,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/dugite/-/dugite-1.105.0.tgz#51a645004c29d42c42435441f829ef96334dd469",
-        "sha512": "d0a366439a54e3ee8845896108a6badc5ebfaffa99b5f34b06e944a14efcb3981a5ad02d8339edd721700fbacce39fbb0b7db72fda9f272ce5f5958bbce2a263",
-        "dest-filename": "dugite-1.105.0.tgz",
+        "url": "https://registry.yarnpkg.com/dugite/-/dugite-1.109.0.tgz#662f726befeefb47b697d6e08f940be865699b74",
+        "sha512": "a4f02cebb8ffb05e98f38a5f23de153ad8ccb42c57d7b39a34e8203fea49019e2c039dcebdc423db33e093cec49d9699a0e99061ad047651ffb6c11085cfb054",
+        "dest-filename": "dugite-1.109.0.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {

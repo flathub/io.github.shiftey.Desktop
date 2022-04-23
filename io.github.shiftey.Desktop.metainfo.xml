@@ -40,11 +40,16 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="2.9.14-linux2" date="2022-04-15">
+        <release version="2.9.15-linux1" date="2022-04-24">
             <description>
-                <p>Fixes and improvements</p>
+                <p>New Features</p>
                 <ul>
-                  <li>Update electron to 17.4.0</li>
+                    <li>Add support for GNOME console and newer GNOME editors</li>
+                    <li>Add support for detecting Windows VSCode from WSL</li>
+                </ul>
+            <p>Fixes and improvements</p>
+                <ul>
+                    <li>Redesigned dialog for re-running checks</li>
                 </ul>
             </description>
         </release>
