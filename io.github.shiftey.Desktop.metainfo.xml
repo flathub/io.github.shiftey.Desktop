@@ -40,17 +40,17 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="2.9.15-linux1" date="2022-04-24">
+        <release version="release-3.0.0-linux1" date="2022-04-28">
             <description>
                 <p>New Features</p>
                 <ul>
-                    <li>Add support for GNOME console and newer GNOME editors</li>
-                    <li>Add support for detecting Windows VSCode from WSL</li>
+                    <li>Get notified when your pull requests are reviewed</li>
                 </ul>
-            <p>Fixes and improvements</p>
+                <p>Fixes and improvements</p>
                 <ul>
-                    <li>Redesigned dialog for re-running checks</li>
-                </ul>
+                    <li>Default to merging when pulling without a configured preference between merge or rebase</li>
+                    <li>Add ability to re-run individual and failed GitHub Action checks</li>
+                </ul> 
             </description>
         </release>
     </releases> 
