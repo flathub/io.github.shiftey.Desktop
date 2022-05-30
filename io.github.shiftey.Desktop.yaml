@@ -24,6 +24,7 @@ finish-args:
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.gtk.vfs.*
+  - --talk-name=com.canonical.AppMenu.Registrar
   - --filesystem=~/.gnupg:rw
   - --filesystem=xdg-config/gnupg:rw
   - --filesystem=xdg-run/gnupg
