@@ -89,8 +89,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.0.0-linux2
-        commit: 375214d5624f9a44000dc312cdc6dbb6fcf5cc3c
+        tag: release-3.0.1-linux1
+        commit: f1f0e54d1d461bc27bcd232dffd538646f5fd8ff
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
