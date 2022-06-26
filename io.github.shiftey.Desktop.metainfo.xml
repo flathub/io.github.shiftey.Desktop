@@ -40,19 +40,11 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="3.0.2-linux1" date="2022-06-25"/>
-        <release version="3.0.1-linux1" date="2022-06-14"/>
-        <release version="3.0.0-linux2" date="2022-05-26"/>
-        <release version="release-3.0.0-linux1" date="2022-04-28">
+        <release version="3.0.2-linux1" date="2022-06-25">
             <description>
-                <p>New Features</p>
-                <ul>
-                    <li>Get notified when your pull requests are reviewed</li>
-                </ul>
                 <p>Fixes and improvements</p>
                 <ul>
-                    <li>Default to merging when pulling without a configured preference between merge or rebase</li>
-                    <li>Add ability to re-run individual and failed GitHub Action checks</li>
+                    <li>Updated electron from 17.4.0 to 17.4.5</li>
                 </ul> 
             </description>
         </release>
