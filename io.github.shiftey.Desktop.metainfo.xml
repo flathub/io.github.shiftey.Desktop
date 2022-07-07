@@ -40,6 +40,7 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+        <release version="3.0.3-linux1" date="2022-07-07"/>
         <release version="3.0.2-linux1" date="2022-06-25">
             <description>
                 <p>Fixes and improvements</p>
