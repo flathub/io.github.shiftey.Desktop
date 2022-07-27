@@ -20,6 +20,7 @@ finish-args:
   - --filesystem=xdg-data/flatpak/app:ro
   - --filesystem=/var/lib/flatpak/app:ro
   - --filesystem=xdg-run/keyring
+  - --filesystem=xdg-data/Trash
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
@@ -28,6 +29,8 @@ finish-args:
   - --filesystem=~/.gnupg:rw
   - --filesystem=xdg-config/gnupg:rw
   - --filesystem=xdg-run/gnupg
+  - --env=FLATPAK_HOST=1
+  - --env=ELECTRON_TRASH=gio
 modules:
   - shared-modules/libsecret/libsecret.json
   - name: git
@@ -47,8 +50,8 @@ modules:
     sources:
     # latest long term support release
       - type: archive
-        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.33.tar.bz2
-        sha256: 8688836e8c043d70410bb64d72de6ae15176e09ecede8d24528b4380c000e4e3
+        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.36.tar.bz2
+        sha256: bdfe783810fceca9703b9e811817acca63ee9ef0174e616598e8ea6590aa4c9c
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -99,5 +102,7 @@ modules:
         path: io.github.shiftey.Desktop.desktop
       - type: file
         path: io.github.shiftey.Desktop.metainfo.xml
-      - type: file
-        path: start-github-desktop.sh
+      - type: script
+        dest-filename: start-github-desktop.sh
+        commands:
+          - exec zypak-wrapper /app/github-desktop/github-desktop "$@"
