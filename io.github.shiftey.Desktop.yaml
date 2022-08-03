@@ -105,4 +105,5 @@ modules:
       - type: script
         dest-filename: start-github-desktop.sh
         commands:
+          - export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID
           - exec zypak-wrapper /app/github-desktop/github-desktop "$@"
