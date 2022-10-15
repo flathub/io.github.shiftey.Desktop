@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node16
+  - org.freedesktop.Sdk.Extension.node18
 command: start-github-desktop
 separate-locales: false
 rename-icon: io.github.shiftey.Desktop
@@ -13,6 +13,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --socket=ssh-auth
+  - --socket=gpg-agent
   - --share=network
   - --device=all
   - --filesystem=host
@@ -26,9 +27,6 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.gtk.vfs.*
   - --talk-name=com.canonical.AppMenu.Registrar
-  - --filesystem=~/.gnupg:rw
-  - --filesystem=xdg-config/gnupg:rw
-  - --filesystem=xdg-run/gnupg
   - --env=FLATPAK_HOST=1
   - --env=ELECTRON_TRASH=gio
 modules:
@@ -74,7 +72,7 @@ modules:
         $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
       - node ./vendor/yarn-1.21.1.js --offline --verbose
       # Run electron-builder, passing the architecture arguments to it.
-      - . flatpak-node/electron-builder-arch-args.sh; node ./vendor/yarn-1.21.1.js
+      - . flatpak-node/electron-builder-arch-args.sh;  node ./vendor/yarn-1.21.1.js
         run --offline build:prod $ELECTRON_BUILDER_ARCH_ARGS
       # Copy the resulting, unpacked directory to /app.
       # (A glob is used because the directory name may contain the current arch.)
