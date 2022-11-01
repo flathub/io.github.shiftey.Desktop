@@ -40,7 +40,14 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-        <release version="3.1.1-linux1" date="2022-10-15"/>
+        <release version="3.1.1-linux1" date="2022-10-15">
+          <description>
+            <p>Fixes and improvements</p>
+            <ul>
+              <li>App correctly remembers undo commit prompt setting</li>
+            </ul>
+          </description>
+        </release>
         <release version="3.0.7-linux1" date="2022-09-08"/>
         <release version="3.0.5-linux1" date="2022-08-03"/>
         <release version="3.0.4-linux1" date="2022-07-26"/>
