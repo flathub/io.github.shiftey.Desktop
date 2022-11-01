@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node16
+  - org.freedesktop.Sdk.Extension.node18
 command: start-github-desktop
 separate-locales: false
 rename-icon: io.github.shiftey.Desktop
@@ -13,6 +13,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --socket=ssh-auth
+  - --socket=gpg-agent
   - --share=network
   - --device=all
   - --filesystem=host
@@ -26,9 +27,6 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.gtk.vfs.*
   - --talk-name=com.canonical.AppMenu.Registrar
-  - --filesystem=~/.gnupg:rw
-  - --filesystem=xdg-config/gnupg:rw
-  - --filesystem=xdg-run/gnupg
   - --env=FLATPAK_HOST=1
   - --env=ELECTRON_TRASH=gio
 modules:
@@ -69,12 +67,13 @@ modules:
         # Use predownloaded dugite-native
         TMPDIR: /run/build/github-desktop/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/github-desktop/flatpak-node/cache
+        NODE_OPTIONS: --openssl-legacy-provider
     build-commands:
       - HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror
         $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
       - node ./vendor/yarn-1.21.1.js --offline --verbose
       # Run electron-builder, passing the architecture arguments to it.
-      - . flatpak-node/electron-builder-arch-args.sh; node ./vendor/yarn-1.21.1.js
+      - . flatpak-node/electron-builder-arch-args.sh;  node ./vendor/yarn-1.21.1.js
         run --offline build:prod $ELECTRON_BUILDER_ARCH_ARGS
       # Copy the resulting, unpacked directory to /app.
       # (A glob is used because the directory name may contain the current arch.)
@@ -92,11 +91,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.0.7-linux1
-        commit: 63391524a981e28b4034224f45a7957b0678e7d4
+        tag: release-3.1.1-linux1
+        commit: 6c9aa22035a5e0317d3089df1d8ce8513f5ea165
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
+      - type: patch 
+        path: node_options.patch
       - generated-sources.json
       - type: file
         path: io.github.shiftey.Desktop.desktop
