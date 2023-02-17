@@ -22,9 +22,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/desktop/dugite-native/releases/download/v2.35.6/dugite-native-v2.35.6-0a8cfa4-ubuntu.tar.gz",
-        "sha256": "db554fa79329f3c4a6c16b015f1dfbf2d83e8b83b6c9c331a90685e7f59c2606",
-        "dest-filename": "dugite-native-v2.35.6-0a8cfa4-ubuntu.tar.gz",
+        "url": "https://github.com/desktop/dugite-native/releases/download/v2.39.2/dugite-native-v2.39.2-ddb2ace-ubuntu.tar.gz",
+        "sha256": "b08c173de92eecf653427810cbc9193efb3b39751690ec21196c79805038e738",
+        "dest-filename": "dugite-native-v2.39.2-ddb2ace-ubuntu.tar.gz",
         "dest": "flatpak-node/tmp",
         "only-arches": [
             "x86_64"
@@ -3863,9 +3863,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/dugite/-/dugite-2.2.0.tgz#6678a463acd2e3e489736555eb2baf4224d087db",
-        "sha512": "702ce6b4d8f450d8259bde200a0c342a412ece5569d8385127faf0c905578eefe31504c4d5658155ee580926a7088512caef3413526a42f0af43dcb072645bd5",
-        "dest-filename": "dugite-2.2.0.tgz",
+        "url": "https://registry.yarnpkg.com/dugite/-/dugite-2.4.0.tgz#e268f694d46a03e948b27ea0ecfba854d4eec82d",
+        "sha512": "0b5201be9d0472baac491ddf6bb70018cc6554d99a99203b7f262f6dd0421adc36993abdc0a6a53d448b6286331aec0a0c9524bfbd32401bb9dde43f89928852",
+        "dest-filename": "dugite-2.4.0.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -7587,9 +7587,16 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/minipass/-/minipass-3.3.4.tgz#ca99f95dd77c43c7a76bf51e6d200025eee0ffae",
-        "sha512": "23d58f6d61c21aef16fba9356621a93eed069282817a8ae47ca36e00504d4b51cd149be47bcdacc6f2396f370236958fa2b90e3b9410fb3a26cf3c11c5e8d78b",
-        "dest-filename": "minipass-3.3.4.tgz",
+        "url": "https://registry.yarnpkg.com/minipass/-/minipass-3.3.6.tgz#7bba384db3a1520d18c9c0e5251c3444e95dd94a",
+        "sha512": "0f188d89dc5210afad1c6eb3388925bcd3b09b786f0ab6d4addb7363be14e87293271bc80df3942f95b93f61a17770d392184a3d81aa78d508879a9c3386017f",
+        "dest-filename": "minipass-3.3.6.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/minipass/-/minipass-4.0.3.tgz#00bfbaf1e16e35e804f4aa31a7c1f6b8d9f0ee72",
+        "sha512": "396dabe2c434b08fb3e5c904b797354eb8b8c53819c180f1a44e787aa5a5425a104685ad5e3aadf6e749e59e1d4afef02be9df148ec5457c82a4149fb7e82917",
+        "dest-filename": "minipass-4.0.3.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -10208,6 +10215,13 @@
         "url": "https://registry.yarnpkg.com/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621",
         "sha512": "6a7fca650cd052464292ea0003ae2133dd97d14adbe95a51840165943cf3e3853699c0f9b1c993df305ce15815a64ba0179f34f83427f1e0054b2a10b74b739c",
         "dest-filename": "tar-6.1.11.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/tar/-/tar-6.1.13.tgz#46e22529000f612180601a6fe0680e7da508847b",
+        "sha512": "8dd20120de8b4c87b68eacdacbfdafb582e50476b7245e36a2dde1d5d5bc4343da006e2ff2b9b472fa5578fb5abb90ba38a5c619c80ef6ad8030d496c622ea2b",
+        "dest-filename": "tar-6.1.13.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
