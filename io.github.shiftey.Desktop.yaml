@@ -31,23 +31,6 @@ finish-args:
   - --env=ELECTRON_TRASH=gio
 modules:
   - shared-modules/libsecret/libsecret.json
-  - name: git
-    buildsystem: simple
-    build-commands:
-    # git has autotools without automake so fun times
-      - make configure
-      - ./configure --prefix=/app  --with-tcltk no  --with-gitconfig=/run/host/etc/gitconfig --with-gitattributes=/run/host/etc/gitattributes
-      - make -j${FLATPAK_BUILDER_N_JOBS}
-      - make install
-    sources:
-      - type:   git
-        url:    https://github.com/git/git.git
-        tag:    v2.39.2
-        commit: cbf04937d5b9fcf0a76c28f69e6294e9e3ecd7e6
-    cleanup:
-      - /share/git-core
-      - /share/gitweb
-      - /share/perl5
   - name: gpg
     config-opts:
       - --disable-doc
