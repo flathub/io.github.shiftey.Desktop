@@ -86,8 +86,8 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
-      #- type: patch
-      #  path: node_options.patch
+      - type: patch
+        path: node_options.patch
       - generated-sources.json
       - type: file
         path: io.github.shiftey.Desktop.desktop

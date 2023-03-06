@@ -27027,7 +27027,7 @@
     {
         "type": "git",
         "url": "https://github.com/sergiou87/prebuild",
-        "commit": "d3761817d9a0db1ecf4dfbf12d02b36b0a03cadc",
+        "commit": "7c0810338b36772ba5f1141ae41e22a6d81f43bc",
         "dest": "flatpak-node/tmp/prebuild-d3761817d9a0db1ecf4dfbf12d02b36b0a03cadc"
     },
     {
