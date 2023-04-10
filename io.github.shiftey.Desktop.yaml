@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '22.08'
+base-version: "22.08"
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: "22.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node16
@@ -37,7 +37,7 @@ modules:
       - --enable-gpg-is-gpg2
       - --disable-tests
     sources:
-    # latest long term support release
+      # latest long term support release
       - type: archive
         url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.41.tar.bz2
         sha256: 13f3291007a5e8546fcb7bc0c6610ce44aaa9b3995059d4f8145ba09fd5be3e1
@@ -52,9 +52,9 @@ modules:
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
-        OFFLINE: '1'
-        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
+        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+        OFFLINE: "1"
+        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
         # Use predownloaded dugite-native
         TMPDIR: /run/build/github-desktop/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/github-desktop/flatpak-node/cache
@@ -81,8 +81,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.2.0-linux1
-        commit: f5f68928c2cae3a4dad4e9814681115c9d3ef834
+        tag: release-3.2.1-linux2
+        commit: 8f0ae3a4413c722063cb9fab43a572159402d1b8
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
