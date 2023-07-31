@@ -3,6 +3,7 @@
 import json
 import os
 import subprocess
+import requests
 
 
 if __name__ == "__main__":
@@ -41,6 +42,10 @@ if __name__ == "__main__":
                 )
                 source["dest"] = f"flatpak-node/electron-cache/{cache_dir}"
                 del source["dest-filename"]
+        if source.get("type")=="git" and source.get("url") == "https://github.com/sergiou87/prebuild":
+            req = requests.get("https://api.github.com/repos/sergiou87/prebuild/commits/master")
+            jsn = req.json()
+            source["commit"] = jsn["sha"]
 
     with open(generated_sources_path, "w") as fp:
         json.dump(generated_sources, fp, indent=4)
