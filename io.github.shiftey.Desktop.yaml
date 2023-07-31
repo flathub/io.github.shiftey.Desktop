@@ -45,7 +45,7 @@ modules:
     buildsystem: simple
     build-options:
       # Add the node bin directory & yarn directory.
-      append-path: /usr/lib/sdk/node16/bin:/app/yarn/bin:/run/build/github-desktop/flatpak-node/chromedriver
+      append-path: /usr/lib/sdk/node18/bin:/app/yarn/bin:/run/build/github-desktop/flatpak-node/chromedriver
       env:
         # Sets the directory where Node is located so way npm won't download the headers.
         npm_config_nodedir: /usr/lib/sdk/node18
@@ -81,8 +81,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.2.6-linux1
-        commit: 6d3c6806320de3d0a856ed090138c88bf57a77a3
+        tag: release-3.2.7-linux2
+        commit: c4fa855efa39b65ccbb57b185a40857f7f3402e5
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
