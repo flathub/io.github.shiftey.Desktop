@@ -1,4 +1,4 @@
-Flatpak manifest for GitHub Destkop app
+Flatpak manifest for GitHub Desktop app
 =======================================
 
 This repository contains the files to create a Flatpak version of the [GitHub Desktop](https://desktop.github.com/) Git client.
