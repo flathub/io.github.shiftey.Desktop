@@ -46,12 +46,13 @@ modules:
     build-commands:
       - install -Dm755  node-gyp /app/bin
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: script
         dest-filename: node-gyp
         commands:
-          - node /usr/lib/sdk/node18/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js $@
+          - node /usr/lib/sdk/node18/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js
+            $@
   - name: github-desktop
     buildsystem: simple
     build-options:
@@ -70,7 +71,8 @@ modules:
         TMPDIR: /run/build/github-desktop/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/github-desktop/flatpak-node/cache
     build-commands:
-      - HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
+      - HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror
+        $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
       - ln -s $XDG_CACHE_HOME/node-gyp $HOME/.electron-gyp
       - ls /usr/lib/sdk/node18/lib/node_modules/npm/node_modules/node-gyp/bin
       - node ./vendor/yarn-1.21.1.js --offline --verbose
@@ -93,8 +95,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.3.3-linux2
-        commit: 6960955cdd416ca35803634af6ed2c8557a316ef
+        tag: release-3.3.5-linux1
+        commit: 6de934a2336310608bd2f96dab5425cd1401ace1
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
