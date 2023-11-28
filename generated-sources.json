@@ -1,17 +1,17 @@
 [
     {
         "type": "archive",
-        "url": "https://electronjs.org/headers/v26.2.4/node-v26.2.4-headers.tar.gz",
+        "url": "https://electronjs.org/headers/v26.6.1/node-v26.6.1-headers.tar.gz",
         "strip-components": 1,
-        "sha256": "73161758bcd754687b273c0242d315e93df73205de07485d837c237b2abf2900",
-        "dest": "flatpak-node/cache/node-gyp/26.2.4"
+        "sha256": "1776f1aec5fdaf2dea7cf61d2fe041a9c78e042862ec22025e6acbc48b4d4b3f",
+        "dest": "flatpak-node/cache/node-gyp/26.6.1"
     },
     {
         "type": "archive",
-        "url": "https://www.electronjs.org/headers/v26.2.4/node-v26.2.4-headers.tar.gz",
+        "url": "https://www.electronjs.org/headers/v26.6.1/node-v26.6.1-headers.tar.gz",
         "strip-components": 1,
-        "sha256": "73161758bcd754687b273c0242d315e93df73205de07485d837c237b2abf2900",
-        "dest": "flatpak-node/cache/node-gyp/26.2.4"
+        "sha256": "1776f1aec5fdaf2dea7cf61d2fe041a9c78e042862ec22025e6acbc48b4d4b3f",
+        "dest": "flatpak-node/cache/node-gyp/26.6.1"
     },
     {
         "type": "file",
@@ -161,16 +161,16 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v26.2.4/SHASUMS256.txt",
-        "sha256": "83dcf4f75ff3f965390ede20d25e7e88281415841b9c2bd9955195f76e15d726",
-        "dest-filename": "SHASUMS256.txt-26.2.4",
+        "url": "https://github.com/electron/electron/releases/download/v26.6.1/SHASUMS256.txt",
+        "sha256": "d9e50261d7e1c4d2b537c6d65f35a9a130a5b155877e10216c2bf0167350375e",
+        "dest-filename": "SHASUMS256.txt-26.6.1",
         "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v26.2.4/electron-v26.2.4-linux-arm64.zip",
-        "sha256": "a401d68820d1c87006b683d98cfb691ffac1218c815757a3c5a0a4c2f3f08888",
-        "dest-filename": "electron-v26.2.4-linux-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v26.6.1/electron-v26.6.1-linux-arm64.zip",
+        "sha256": "fe50bc72c5b99fddf6ae6df8ee55ee4a28ee398919a3555181bb6b034ccaf8cd",
+        "dest-filename": "electron-v26.6.1-linux-arm64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
@@ -178,9 +178,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v26.2.4/electron-v26.2.4-linux-armv7l.zip",
-        "sha256": "300e1a3e84d81277f9ab7f5060b980b2b1387979d6f07ea9d78bce5139430420",
-        "dest-filename": "electron-v26.2.4-linux-armv7l.zip",
+        "url": "https://github.com/electron/electron/releases/download/v26.6.1/electron-v26.6.1-linux-armv7l.zip",
+        "sha256": "af273fb17aa880a39551e7ef87b937f0a6813f0fe5bc7bc17549bc00e79b95d3",
+        "dest-filename": "electron-v26.6.1-linux-armv7l.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
@@ -188,9 +188,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v26.2.4/electron-v26.2.4-linux-x64.zip",
-        "sha256": "d2226ee3fb8bcd17abfe9747ba6c8d6ae2719a6256896d4861e3cb670ec2beeb",
-        "dest-filename": "electron-v26.2.4-linux-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v26.6.1/electron-v26.6.1-linux-x64.zip",
+        "sha256": "6248bc50a9f97c9354308dc8bd7b37eba1b8fbe31687aff0049423715eaa4fa9",
+        "dest-filename": "electron-v26.6.1-linux-x64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
@@ -8983,9 +8983,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron/-/electron-26.2.4.tgz#36616b2386b083c13ae9188f2d8ccf233c23404a",
-        "sha512": "c1e31448cc83868e44d033d0ddbade6dadc3f7a231c0dbed6078cc77fe3fc0d37705d239b37fb4a2b3673d518915c2e14af2a8c6e294a9d5689d4a1c04fc2540",
-        "dest-filename": "electron-26.2.4.tgz",
+        "url": "https://registry.yarnpkg.com/electron/-/electron-26.6.1.tgz#bf4835d92210ccbec632088d1975bf78ed05c153",
+        "sha512": "e15cfdbb426dfe484f6bf7a7da5f09bfa49611fb0afe279662d7219798f47256cd4a375e4ee7271053a1cfd07d5b0b0099f423c419e9b8c66999d06ecb1abec2",
+        "dest-filename": "electron-26.6.1.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -27429,7 +27429,7 @@
         "type": "inline",
         "contents": "9",
         "dest-filename": "installVersion",
-        "dest": "flatpak-node/cache/node-gyp/26.2.4"
+        "dest": "flatpak-node/cache/node-gyp/26.6.1"
     },
     {
         "type": "script",
@@ -27467,10 +27467,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv26.2.4electron-v26.2.4-linux-arm64.zip\"",
-            "ln -s \"../electron-v26.2.4-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv26.2.4electron-v26.2.4-linux-arm64.zip/electron-v26.2.4-linux-arm64.zip\"",
-            "mkdir -p \"c1876fbc044be4484b20a19820d8d79a611f23871beae23262fac95a5fd2d59e\"",
-            "ln -s \"../electron-v26.2.4-linux-arm64.zip\" \"c1876fbc044be4484b20a19820d8d79a611f23871beae23262fac95a5fd2d59e/electron-v26.2.4-linux-arm64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv26.6.1electron-v26.6.1-linux-arm64.zip\"",
+            "ln -s \"../electron-v26.6.1-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv26.6.1electron-v26.6.1-linux-arm64.zip/electron-v26.6.1-linux-arm64.zip\"",
+            "mkdir -p \"fe7d2085f40419a08abfab4df4229e1b1da32bfece7cfcb8a906bd1e0b0811de\"",
+            "ln -s \"../electron-v26.6.1-linux-arm64.zip\" \"fe7d2085f40419a08abfab4df4229e1b1da32bfece7cfcb8a906bd1e0b0811de/electron-v26.6.1-linux-arm64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -27480,10 +27480,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv26.2.4electron-v26.2.4-linux-armv7l.zip\"",
-            "ln -s \"../electron-v26.2.4-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv26.2.4electron-v26.2.4-linux-armv7l.zip/electron-v26.2.4-linux-armv7l.zip\"",
-            "mkdir -p \"c1876fbc044be4484b20a19820d8d79a611f23871beae23262fac95a5fd2d59e\"",
-            "ln -s \"../electron-v26.2.4-linux-armv7l.zip\" \"c1876fbc044be4484b20a19820d8d79a611f23871beae23262fac95a5fd2d59e/electron-v26.2.4-linux-armv7l.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv26.6.1electron-v26.6.1-linux-armv7l.zip\"",
+            "ln -s \"../electron-v26.6.1-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv26.6.1electron-v26.6.1-linux-armv7l.zip/electron-v26.6.1-linux-armv7l.zip\"",
+            "mkdir -p \"fe7d2085f40419a08abfab4df4229e1b1da32bfece7cfcb8a906bd1e0b0811de\"",
+            "ln -s \"../electron-v26.6.1-linux-armv7l.zip\" \"fe7d2085f40419a08abfab4df4229e1b1da32bfece7cfcb8a906bd1e0b0811de/electron-v26.6.1-linux-armv7l.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -27493,10 +27493,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv26.2.4electron-v26.2.4-linux-x64.zip\"",
-            "ln -s \"../electron-v26.2.4-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv26.2.4electron-v26.2.4-linux-x64.zip/electron-v26.2.4-linux-x64.zip\"",
-            "mkdir -p \"c1876fbc044be4484b20a19820d8d79a611f23871beae23262fac95a5fd2d59e\"",
-            "ln -s \"../electron-v26.2.4-linux-x64.zip\" \"c1876fbc044be4484b20a19820d8d79a611f23871beae23262fac95a5fd2d59e/electron-v26.2.4-linux-x64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv26.6.1electron-v26.6.1-linux-x64.zip\"",
+            "ln -s \"../electron-v26.6.1-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv26.6.1electron-v26.6.1-linux-x64.zip/electron-v26.6.1-linux-x64.zip\"",
+            "mkdir -p \"fe7d2085f40419a08abfab4df4229e1b1da32bfece7cfcb8a906bd1e0b0811de\"",
+            "ln -s \"../electron-v26.6.1-linux-x64.zip\" \"fe7d2085f40419a08abfab4df4229e1b1da32bfece7cfcb8a906bd1e0b0811de/electron-v26.6.1-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
