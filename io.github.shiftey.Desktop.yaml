@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: "23.08"
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node18
@@ -39,14 +39,14 @@ modules:
     sources:
       # latest long term support release
       - type: archive
-        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.4.2.tar.bz2
-        sha256: 97eb47df8ae5a3ff744f868005a090da5ab45cb48ee9836dbf5ee739a4e5cf49
+        url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.4.3.tar.bz2
+        sha256: a271ae6d732f6f4d80c258ad9ee88dd9c94c8fdc33c3e45328c4d7c126bd219d
   - name: node-gyp
     buildsystem: simple
     build-commands:
       - install -Dm755  node-gyp /app/bin
     cleanup:
-      - '*'
+      - "*"
     sources:
       - type: script
         dest-filename: node-gyp
@@ -64,9 +64,9 @@ modules:
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
-        OFFLINE: '1'
-        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
+        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+        OFFLINE: "1"
+        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
         # Use predownloaded dugite-native
         TMPDIR: /run/build/github-desktop/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/github-desktop/flatpak-node/cache
@@ -95,8 +95,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.3.5-linux1
-        commit: 6de934a2336310608bd2f96dab5425cd1401ace1
+        tag: release-3.3.5-linux2
+        commit: 0bc601ebcf6bf784449db55602723dd76a3bc1cf
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
