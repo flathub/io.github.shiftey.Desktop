@@ -74,7 +74,6 @@ modules:
       - HOME=$PWD node ./vendor/yarn-1.21.1.js config --offline set yarn-offline-mirror
         $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
       - ln -s $XDG_CACHE_HOME/node-gyp $HOME/.electron-gyp
-      - ls /usr/lib/sdk/node18/lib/node_modules/npm/node_modules/node-gyp/bin
       - node ./vendor/yarn-1.21.1.js --offline --verbose
       # Run electron-builder, passing the architecture arguments to it.
       - . flatpak-node/electron-builder-arch-args.sh;  node ./vendor/yarn-1.21.1.js
