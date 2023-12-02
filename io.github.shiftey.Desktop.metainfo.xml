@@ -7,25 +7,35 @@
   <project_license>MIT</project_license>
   <description>
     <p>
-      Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, GitHub Desktop simplifies your development workflow.
+      Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned
+      user, GitHub Desktop simplifies your development workflow.
     </p>
     <p>
-      Attribute commits with collaborators easily. Quickly add co-authors to your commit. Great for pairing and excellent for sending a little love/credit to that special someone who helped fix that gnarly bug of yours. See the attribution on the history page, undo an accidental attribution, and see the co-authors on github.com
+      Attribute commits with collaborators easily. Quickly add co-authors to your commit. Great for
+      pairing and excellent for sending a little love/credit to that special someone who helped fix
+      that gnarly bug of yours. See the attribution on the history page, undo an accidental
+      attribution, and see the co-authors on github.com
     </p>
     <p>
-      Checkout branches with pull requests and view CI statuses. See all open pull requests for your repositories and check them out as if they were a local branch, even if they're from upstream branches or forks. See which pull requests pass commit status checks, too!]
+      Checkout branches with pull requests and view CI statuses. See all open pull requests for your
+      repositories and check them out as if they were a local branch, even if they're from upstream
+      branches or forks. See which pull requests pass commit status checks, too!]
     </p>
     <p>
-      Syntax highlighted diffs. The new GitHub Desktop supports syntax highlighting when viewing diffs for a variety of different languages.
+      Syntax highlighted diffs. The new GitHub Desktop supports syntax highlighting when viewing
+      diffs for a variety of different languages.
     </p>
     <p>
-      Expanded image diff support. Easily compare changed images. See the before and after, swipe or fade between the two, or look at just the changed parts.
+      Expanded image diff support. Easily compare changed images. See the before and after, swipe or
+      fade between the two, or look at just the changed parts.
     </p>
     <p>
-      Extensive editor &amp; shell integrations. Open your favorite editor or shell from the app, or jump back to GitHub Desktop from your shell. GitHub Desktop is your springboard for work.
+      Extensive editor &amp; shell integrations. Open your favorite editor or shell from the app, or
+      jump back to GitHub Desktop from your shell. GitHub Desktop is your springboard for work.
     </p>
     <p>
-      Community supported. GitHub Desktop is open source now! Check out our roadmap, contribute, and help us make collaboration even easier.
+      Community supported. GitHub Desktop is open source now! Check out our roadmap, contribute, and
+      help us make collaboration even easier.
     </p>
     <p>
       This version of GitHub Desktop is a fork that adds support for Linux.
@@ -34,43 +44,63 @@
   <url type="homepage">https://github.com/shiftkey/desktop#readme</url>
   <launchable type="desktop-id">io.github.shiftey.Desktop.desktop</launchable>
   <screenshots>
-        <screenshot type="default">
-          <image>https://cloud.githubusercontent.com/assets/359239/26094502/a1f56d02-3a5d-11e7-8799-23c7ba5e5106.png</image>
-        </screenshot>
+    <screenshot type="default">
+      <image>
+        https://cloud.githubusercontent.com/assets/359239/26094502/a1f56d02-3a5d-11e7-8799-23c7ba5e5106.png</image>
+    </screenshot>
   </screenshots>
-  <content_rating type="oars-1.1"/>
+  <content_rating type="oars-1.1" />
   <releases>
-        <release version="3.3.5-linux1" date="2023-11-27"/>
-        <release version="3.3.3-linux2" date="2023-10-09"/>
-        <release version="3.3.1-linux1" date="2023-09-03"/>
-        <release version="3.2.9-linux1" date="2023-08-28"/>
-        <release version="3.2.7-linux2" date="2023-07-31"/>
-        <release version="3.2.6-linux1" date="2023-07-04"/>
-        <release version="3.2.5-linux1" date="2023-07-04"/>
-        <release version="3.2.1-linux2" date="2023-04-10"/>
-        <release version="3.2.0-linux1" date="2023-03-02"/>
-        <release version="3.1.8-linux1" date="2023-02-27"/>
-        <release version="3.1.7-linux1" date="2023-02-17"/>
-        <release version="3.1.5-linux2" date="2023-01-30"/>
-        <release version="3.1.1-linux1" date="2022-10-15">
-          <description>
-            <p>Fixes and improvements</p>
-            <ul>
-              <li>App correctly remembers undo commit prompt setting</li>
-            </ul>
-          </description>
-        </release>
-        <release version="3.0.7-linux1" date="2022-09-08"/>
-        <release version="3.0.5-linux1" date="2022-08-03"/>
-        <release version="3.0.4-linux1" date="2022-07-26"/>
-        <release version="3.0.3-linux1" date="2022-07-07"/>
-        <release version="3.0.2-linux1" date="2022-06-25">
-            <description>
-                <p>Fixes and improvements</p>
-                <ul>
-                    <li>Updated electron from 17.4.0 to 17.4.5</li>
-                </ul> 
-            </description>
-        </release>
-    </releases> 
+    <release version="3.3.5-linux2" date="2023-11-27">
+      <description>
+        <p>Improved</p>
+        <ul>
+          <li>Upgrade Electron to v26.6.1</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.3.5-linux1" date="2023-11-27">
+      <description>
+        <p>Added</p>
+        <ul>
+          <li>Syntax highlighting now supports .cc files</li>
+        </ul>
+        <p>Fixed</p>
+        <ul>
+          <li>Long file paths are correctly truncated in the conflicts dialog </li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.3.3-linux2" date="2023-10-09" />
+    <release version="3.3.1-linux1" date="2023-09-03" />
+    <release version="3.2.9-linux1" date="2023-08-28" />
+    <release version="3.2.7-linux2" date="2023-07-31" />
+    <release version="3.2.6-linux1" date="2023-07-04" />
+    <release version="3.2.5-linux1" date="2023-07-04" />
+    <release version="3.2.1-linux2" date="2023-04-10" />
+    <release version="3.2.0-linux1" date="2023-03-02" />
+    <release version="3.1.8-linux1" date="2023-02-27" />
+    <release version="3.1.7-linux1" date="2023-02-17" />
+    <release version="3.1.5-linux2" date="2023-01-30" />
+    <release version="3.1.1-linux1" date="2022-10-15">
+      <description>
+        <p>Fixes and improvements</p>
+        <ul>
+          <li>App correctly remembers undo commit prompt setting</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.0.7-linux1" date="2022-09-08" />
+    <release version="3.0.5-linux1" date="2022-08-03" />
+    <release version="3.0.4-linux1" date="2022-07-26" />
+    <release version="3.0.3-linux1" date="2022-07-07" />
+    <release version="3.0.2-linux1" date="2022-06-25">
+      <description>
+        <p>Fixes and improvements</p>
+        <ul>
+          <li>Updated electron from 17.4.0 to 17.4.5</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
 </component>
