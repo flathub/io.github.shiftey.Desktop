@@ -20,7 +20,6 @@ finish-args:
   - --filesystem=/opt/:ro
   - --filesystem=/var/lib/flatpak/app:ro
   - --filesystem=xdg-run/keyring
-  - --filesystem=xdg-data/Trash
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
