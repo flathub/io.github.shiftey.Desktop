@@ -18,10 +18,8 @@ finish-args:
   - --device=all
   - --filesystem=host
   - --filesystem=/opt/:ro
-  - --filesystem=xdg-data/flatpak/app:ro
   - --filesystem=/var/lib/flatpak/app:ro
   - --filesystem=xdg-run/keyring
-  - --filesystem=xdg-data/Trash
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
@@ -94,8 +92,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.3.5-linux2
-        commit: 0bc601ebcf6bf784449db55602723dd76a3bc1cf
+        tag: release-3.3.6-linux3
+        commit: e32359f8d0ea2f1208d0d0f333e4139d1258e115
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
