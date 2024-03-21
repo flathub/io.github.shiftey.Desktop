@@ -1,8 +1,8 @@
 app-id: io.github.shiftey.Desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: "23.08"
+base-version: '23.08'
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node18
@@ -44,7 +44,7 @@ modules:
     build-commands:
       - install -Dm755  node-gyp /app/bin
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: script
         dest-filename: node-gyp
@@ -62,9 +62,9 @@ modules:
         # Set the Electron cache directory.
         ELECTRON_CACHE: /run/build/github-desktop/flatpak-node/electron-cache
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
-        OFFLINE: "1"
-        CHROMEDRIVER_SKIP_DOWNLOAD: "true"
+        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+        OFFLINE: '1'
+        CHROMEDRIVER_SKIP_DOWNLOAD: 'true'
         # Use predownloaded dugite-native
         TMPDIR: /run/build/github-desktop/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/github-desktop/flatpak-node/cache
@@ -92,8 +92,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/shiftkey/desktop.git
-        tag: release-3.3.6-linux3
-        commit: e32359f8d0ea2f1208d0d0f333e4139d1258e115
+        tag: release-3.3.11-linux1
+        commit: 801de05b8678b029924e85e44815815aa49fb9c4
         x-checker-data:
           type: git
           tag-pattern: release-(\d+\.\d+\.\d+-linux\d+)
