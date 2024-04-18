@@ -27772,8 +27772,14 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-arm64.zip\"",
-            "ln -s \"../electron-v28.2.9-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-arm64.zip/electron-v28.2.9-linux-arm64.zip\"",
+            "mkdir -p \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d\"",
+            "ln -s \"../SHASUMS256.txt-28.2.9\" \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d/SHASUMS256.txt\""
+        ],
+        "dest": "flatpak-node/cache/electron"
+    },
+    {
+        "type": "shell",
+        "commands": [
             "mkdir -p \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d\"",
             "ln -s \"../electron-v28.2.9-linux-arm64.zip\" \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d/electron-v28.2.9-linux-arm64.zip\""
         ],
@@ -27785,8 +27791,6 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-armv7l.zip\"",
-            "ln -s \"../electron-v28.2.9-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-armv7l.zip/electron-v28.2.9-linux-armv7l.zip\"",
             "mkdir -p \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d\"",
             "ln -s \"../electron-v28.2.9-linux-armv7l.zip\" \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d/electron-v28.2.9-linux-armv7l.zip\""
         ],
@@ -27798,10 +27802,41 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-x64.zip\"",
-            "ln -s \"../electron-v28.2.9-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-x64.zip/electron-v28.2.9-linux-x64.zip\"",
             "mkdir -p \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d\"",
             "ln -s \"../electron-v28.2.9-linux-x64.zip\" \"151cf30975c7113a7839e053780856a8f1ac5cebdbc3f0f652e624cafc07df2d/electron-v28.2.9-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-arm64.zip\"",
+            "ln -s \"../electron-v28.2.9-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-arm64.zip/electron-v28.2.9-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-armv7l.zip\"",
+            "ln -s \"../electron-v28.2.9-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-armv7l.zip/electron-v28.2.9-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-x64.zip\"",
+            "ln -s \"../electron-v28.2.9-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv28.2.9electron-v28.2.9-linux-x64.zip/electron-v28.2.9-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
