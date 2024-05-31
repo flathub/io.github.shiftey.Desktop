@@ -54,6 +54,9 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="3.3.13-linux1" date="2024-05-31">
+      <description></description>
+    </release>
     <release version="3.3.12-linux2" date="2024-04-19"/>
     <release version="3.3.12-linux2" date="2024-04-18"/>  
     <release version="3.3.8-linux2" date="2024-02-06"/>
