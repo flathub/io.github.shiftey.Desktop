@@ -32,9 +32,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/desktop/dugite-native/releases/download/v2.43.3/dugite-native-v2.43.3-fa29823-ubuntu-arm64.tar.gz",
-        "sha256": "c7840d7dd4a799f429277199dd990dc53fa6fec163910df73c617eb1bab75cf1",
-        "dest-filename": "dugite-native-v2.43.3-fa29823-ubuntu-arm64.tar.gz",
+        "url": "https://github.com/desktop/dugite-native/releases/download/v2.43.4/dugite-native-v2.43.4-f5c5df6-ubuntu-arm64.tar.gz",
+        "sha256": "eb8b9a9343d42fd185f5f1037bcc20b94aa1cef5b858e25f1a047662aefdc38f",
+        "dest-filename": "dugite-native-v2.43.4-f5c5df6-ubuntu-arm64.tar.gz",
         "dest": "flatpak-node/tmp",
         "only-arches": [
             "aarch64"
