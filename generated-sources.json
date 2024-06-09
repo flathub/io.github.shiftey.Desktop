@@ -32,6 +32,16 @@
     },
     {
         "type": "file",
+        "url": "https://github.com/desktop/dugite-native/releases/download/v2.43.3/dugite-native-v2.43.3-fa29823-ubuntu-arm64.tar.gz",
+        "sha256": "c7840d7dd4a799f429277199dd990dc53fa6fec163910df73c617eb1bab75cf1",
+        "dest-filename": "dugite-native-v2.43.3-fa29823-ubuntu-arm64.tar.gz",
+        "dest": "flatpak-node/tmp",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v28.3.3/SHASUMS256.txt",
         "sha256": "1b50b9f98ad4572b8cc1ac9f1958ba3a09da6e21c2971809d4f64fec7fcabd8b",
         "dest-filename": "SHASUMS256.txt-28.3.3",
