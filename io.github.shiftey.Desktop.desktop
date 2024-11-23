@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=GitHub Desktop
-Exec=start-github-desktop %U
+Exec=start-github-desktop --ozone-platform-hint=auto %U 
 Terminal=false
 Type=Application
 Icon=io.github.shiftey.Desktop 
