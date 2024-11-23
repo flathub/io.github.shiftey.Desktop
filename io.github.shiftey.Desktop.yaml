@@ -12,6 +12,7 @@ rename-icon: io.github.shiftey.Desktop
 finish-args:
   - --share=ipc
   - --socket=x11
+  - --socket=wayland
   - --socket=ssh-auth
   - --socket=gpg-agent
   - --share=network
