@@ -28,6 +28,7 @@ finish-args:
   - --talk-name=com.canonical.AppMenu.Registrar
   - --env=FLATPAK_HOST=1
   - --env=ELECTRON_TRASH=gio
+  - --env=ELECTRON_OZONE_PLATFORM_HINT=auto
 modules:
   - shared-modules/libsecret/libsecret.json
   - name: gpg
