@@ -54,6 +54,86 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="3.4.13-linux1" date="2025-02-24">
+      <p>Fixed</p>
+      <ul>
+        <li>Mitigates several vulnerabilities related to Git's credential helper protocol -
+          CVE-2025-23040, CVE-2024-50349, CVE-2024-52006, CVE-2024-50338, CVE-2024-53263</li>
+      </ul>
+    </release>
+    <release version="3.4.12-linux1" date="2025-02-24">
+      <p>Fixed</p>
+      <ul>
+        <li>Merge branch dialog updates whether a branch can be merged when changing selection</li>
+      </ul>
+    </release>
+    <release version="3.4.11-linux1" date="2025-02-24">
+      <p>Fixed</p>
+      <ul>
+        <li>Prevent crash due to excessively long Git output</li>
+      </ul>
+    </release>
+    <release version="3.4.10-linux1" date="2025-02-24">
+      <p>Added</p>
+      <ul>
+        <li>Add a banner for communicating when prioritized updates exist</li>
+        <li>Add "View Pull Request on GitHub" Option to the Checked-Out Branch Button and Pull
+          Requests List</li>
+      </ul>
+      <p>Fixed</p>
+      <ul>
+        <li>Accurately calculate number of conflicted files in a merge</li>
+        <li>Inform user when a
+          staged renamed file has changes </li>
+        <li>The visual label for the remote url in the
+          repository settings is announced by screen
+          readers </li>
+        <li>Remove duplicate avatar users</li>
+        <li>Fix for indents of clear button in text box</li>
+        <li>Screen readers announce the position of the list items in selectable lists such as the
+          history commit list </li>
+        <li>Limitthe commit message length we accept</li>
+        <li>Prevent repository not found message for large git status operations </li>
+        <li>Add aria-labelledby and aria-describedby attributes to "Show whitespace changes?"
+          popover</li>
+        <li>Fix logical tab order from co-authors text box</li>
+        <li>Allow using Escape to dismiss the commit message warning popover - desktop#19514</li>
+      </ul>
+      <p>Improved</p>
+      <ul>
+        <li>Improved appearance of the list of files in 'File size limit exceeded' dialog</li>
+        <li>Resize events of resizable elements are announced by screen readers</li>
+        <li>Update the names of some JetBrains editors on Linux</li>
+        <li>Swipe image diffs now handle images with transparency better</li>
+        <li>Commit messages now show correct indentation</li>
+      </ul>
+    </release>
+    <release version="3.4.9-linux1" date="2025-02-24">
+      <p>Note: this release required upgrading some very old NPM packages related to keychain access
+        and elevated filesystem access to properly build on ARM architectures, but hopefully there
+        are no functional changes to the application.</p>
+      <p>Fixed</p>
+      <ul>
+        <li>App no longer crash for first time users going through the welcome flow and attempting
+          to sign in more than once</li>
+        <li>Files configured to use the binary merge driver are now treated as binary files when
+          resolving conflicts</li>
+        <li>Fix UI glitch rendering tooltips</li>
+      </ul>
+      <p>Improved</p>
+      <ul>
+        <li>Replace hint text of toggle Co-Authors button with a regular tooltip</li>
+        <li>Use OS emojis</li>
+        <li>Insert unicode emoji</li>
+        <li>Allow resizing Branch and Push/Pull toolbar buttons</li>
+        <li>The commit lists in the "Commit Reachability" dialogs are traversable in browse mode of
+          screen readers</li>
+      </ul>
+      <p>Removed</p>
+      <ul>
+        <li>Remove ruleset bypass confirmation modal</li>
+      </ul>
+    </release>
     <release version="3.4.8-linux1" date="2024-11-12">
       <description>
         <p>Fixed</p>
