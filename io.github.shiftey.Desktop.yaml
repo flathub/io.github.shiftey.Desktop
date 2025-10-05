@@ -20,7 +20,9 @@ finish-args:
   - --filesystem=host
   - --filesystem=/opt/:ro
   - --filesystem=/var/lib/flatpak/app:ro
+  - --filesystem=~/.gitconfig
   - --filesystem=xdg-run/keyring
+  - --filesystem=xdg-run/gnupg:ro
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.Notifications
