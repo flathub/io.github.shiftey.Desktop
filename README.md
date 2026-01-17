@@ -58,8 +58,10 @@ Permissions
 
 By default, this Flatpak requests the `filesystem=host` permission, granting it access to all files on your device. This allows immediate access to any project folders you wish to add, as well as enabling editor integration, and access to relevant Git config files and GPG information.
 
-However, system-wide filesystem access is not required for functionality, so security-conscious users may wish to revoke this permission and selectively allow access to directories, such as only allowing a specific folder where you store projects.
+However, system-wide filesystem access is not necessarily required for basic functionality, so security-conscious users may choose to revoke this permission and selectively allow access to directories, such as only allowing a specific folder where you store projects.
 
 In such case, if you wish to allow GPG signing to work properly, you should grant the Flatpak the permissions `filesystem=~/.gitconfig` and `filesystem=xdg-run/gnupg:ro` as well. If your gitconfig file is in a different location, grant access to that instead.
 
 If you want the editor integration to work properly, you will need to grant access to the location of your preferred editor. You can find the pre-defined list of where GitHub Desktop checks here: https://github.com/shiftkey/desktop/blob/linux/app/src/lib/editors/linux.ts#L18
+
+This section is here as a courtesy to save certain users some time, but it is not a supported usecase. Please only submit bug reports if you can verify that they occur with the standard `filesystem=host` permission.
