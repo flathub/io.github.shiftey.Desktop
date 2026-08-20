@@ -22,7 +22,7 @@
     <p>
       Checkout branches with pull requests and view CI statuses. See all open pull requests for your
       repositories and check them out as if they were a local branch, even if they're from upstream
-      branches or forks. See which pull requests pass commit status checks, too!]
+      branches or forks. See which pull requests pass commit status checks, too!
     </p>
     <p>
       Syntax highlighted diffs. The new GitHub Desktop supports syntax highlighting when viewing
